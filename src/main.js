@@ -143,11 +143,13 @@ const myWorkasView = () => {
 const sectionAddPost = () => {
   let newPostSection = document.getElementById('newPostSection');
   newPostSection.innerHTML =  
-  `<div id="allPost" class="post">
+  `<div class="postPlace">
+  <div id="allPost" class="post">
   <textarea class="basePost" id="textPost" cols="30" rows="10"></textarea>
   <div class="actionButtons">
     <input id="imgForUp" type="file" class="fileAdd">
     <button id="newPost" class="btn">Publicar</button>    
+  </div>
   </div>
   </div>`
   
@@ -173,8 +175,8 @@ const showUpPost = () => {
       // console.log(doc.data());
       homeMain.innerHTML += `<div class="postDiv">
       <div class="postArea"> ${doc.data().post}</div>
-      <div> <img class="images" src=${doc.data().img}></div>
-      <button id="btnComment" class="btnShowComment">Comentarios</button>
+        <div> <img class="images" src=${doc.data().img}></div>
+        <button id="btnComment" class="btnShowComment">Comentarios</button>
       </div>
       <div id="oldComents" class="commentDiv"></div>
       <div id="newComents" class="commentDiv"></div>`;
